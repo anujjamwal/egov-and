@@ -3,6 +3,9 @@ package com.example.practise;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
 
@@ -18,5 +21,15 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
+	
+	public void setIncidentType(View v){
+		
+		Button button = (Button) v;
+		System.out.println(button.ge);
+		
+	}
+	
+	
+
 
 }

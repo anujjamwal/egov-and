@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,9 +8,53 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="horizontal"
     tools:context=".MainActivity" >
-    
 
+    <Button
+        android:id="@+id/acc_type_crime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/acc_type_others"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="38dp"
+        android:layout_weight="0.74"
+        android:gravity="center_vertical"
+        android:text="Crime against women/Children" 
+        android:onClick="setIncidentType"/>
 
-     </EditText>
+    <Button
+        android:id="@+id/acc_type_others"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/acc_type_road"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"
+        android:layout_weight="0.74"
+        android:gravity="center_vertical"
+        android:text="Others" 
+        android:onClick="setIncidentType"/>
 
-</LinearLayout>
+    <Button
+        android:id="@+id/acc_type_road"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/acc_type_crime"
+        android:layout_alignLeft="@+id/acc_type_crime"
+        android:layout_marginBottom="49dp"
+        android:layout_weight="0.74"
+        android:gravity="center_vertical"
+        android:text="Road Accident"
+        android:onClick="setIncidentType" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/acc_type_road"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="69dp"
+        android:layout_marginTop="56dp"
+        android:text="Incident Type"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
