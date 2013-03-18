@@ -1,12 +1,11 @@
 package com.example.practise;
 
-import com.example.practise.R;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.*;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
 
@@ -14,10 +13,6 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		EditText medit = (EditText)findViewById(R.id.name); 		
-		User user=new User();
-		user.getInformation(medit.getText().toString());
-		user.postInformation();
 	}
 
 	@Override
